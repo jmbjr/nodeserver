@@ -37,7 +37,7 @@ function upload(response, request) {
     fs.rename(files.upload.path, "./tmp/test.png", function(error) {
       if (error) {
         fs.unlink("./tmp/test.png");
-        fs.rename(files.upload.path, "./tmp/test.png");
+        fs.rename(files.file.path, "./tmp/test.png");
       }
     });
     response.writeHead(200, {"Content-Type": "text/html"});
